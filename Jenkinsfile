@@ -26,8 +26,8 @@ pipeline {
              sshPut remote: remote, from: "index.html", into: "/var/www/html"
             
              
-             }
-            }
+                    }
+                }
             }
         }
     }
