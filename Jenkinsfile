@@ -19,18 +19,13 @@ pipeline {
         steps {
             script {
              // move the new changed 
-             sh '''
-                echo "echo hello world" >> test.sh
-                cat test.sh
-             '''
-             sh 'ls'
-             withCredentials([usernamePassword(credentialsId: 'sayanid', passwordVariable: 'pass', usernameVariable: 'user')]) {
+          
+             withCredentials([usernamePassword(credentialsId: 'pritam-id', passwordVariable: 'pass', usernameVariable: 'user')]) {
              remote.user = user
              remote.password = pass
-             sshPut remote: remote, from: "index.html", into: "/tmp"
-             sshPut remote: remote, from: "test.sh", into: "/tmp"
-             sshCommand remote: remote, command: "ls /var/www/html && chmod +x /tmp/test.sh"
-             sshScript remote: remote, script: 'test.sh'
+             sshPut remote: remote, from: "index.html", into: "/var/www/html"
+            
+             
              }
             }
             }
