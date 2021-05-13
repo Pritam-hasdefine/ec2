@@ -12,7 +12,7 @@ pipeline {
         stage('Git Clone') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'main', credentialsId: '4af18a21-3317-4da0-85bc-1fbffb60821b', url: 'https://github.com/akashmukh/Jenkins.git'
+                git branch: '*/main', credentialsId: '7cc5f77a-81ae-48c8-8a34-07fc68f71414', url: 'https://github.com/Pritam-hasdefine/apache2.git'
             }
         }
      stage('Deployment'){
