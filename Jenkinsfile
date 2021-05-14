@@ -12,7 +12,8 @@ pipeline {
         stage('Git Clone') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: '*/main', credentialsId: '7cc5f77a-81ae-48c8-8a34-07fc68f71414', url: 'https://github.com/Pritam-hasdefine/apache2.git'
+                
+                git branch: '*/main', credentialsId: 'pritam-id2', url: 'https://github.com/Pritam-hasdefine/apache2.git'
             }
         }
      stage('Deployment'){
