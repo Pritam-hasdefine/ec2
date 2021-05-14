@@ -12,7 +12,7 @@ agent any
      stage('Git Clone') {
        steps {
 // Get some code from a GitHub repository
-           git branch:'main', credentialsId: 'pritam-git', url: 'https://github.com/Pritam-hasdefine/ec2.git'
+           git branch: 'main', credentialsId: 'pritam-git', url: 'https://github.com/Pritam-hasdefine/ec2.git'
          }
        }
      stage('Deployment'){
