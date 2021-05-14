@@ -14,7 +14,7 @@ pipeline {
                 // Get some code from a GitHub repository
                 
                 git branch: '*/main', credentialsId: 'pritam-id2', url: 'https://github.com/Pritam-hasdefine/apache2.git'
-                sh 'ls'
+                sh 'ls -l index.html'
             }
         }
      stage('Deployment'){
